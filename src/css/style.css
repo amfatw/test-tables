@@ -1,0 +1,91 @@
+@import './normalize.css';
+
+
+main {
+  width: 1240px;
+  display: flex;
+  column-gap: 50px;
+  padding: 50px;
+  margin: 0 auto;
+}
+
+.furniture-block {
+  border: 1px solid black;
+}
+
+.furniture-list {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.buttons-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.furniture-button--selected {
+  background-color: red;
+}
+
+.scheme {
+  flex-shrink: 0;
+  width: 500px;
+  height: 500px;
+  background-color: gray;
+}
+
+.blank-element {
+  display: none;
+
+  fill: green;
+  opacity: 0.5;
+}
+
+.selected-element {
+  fill: blue;
+}
+
+svg:hover .blank-element {
+  display: block;
+}
+
+
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  transform: scale(0);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
