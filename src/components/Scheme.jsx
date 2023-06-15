@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { elementOnSchemeClicked } from '../redux/listeners';
 
+import { SchemeGrid } from './svg/SchemeGrid';
 import { BlankElement } from './svg/BlankElement';
 import { SwitchElement } from './svg/SwitchElement';
 
@@ -52,6 +53,8 @@ const Scheme = () => {
       onMouseMove={handleMove}
       onClick={handleClick}
     >
+      <SchemeGrid/>
+      
       {
         allElements.map((element) => {
           const {type, x, y, id} = element;
