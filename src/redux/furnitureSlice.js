@@ -2,7 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 
 import {
   clearSchemeClicked,
-  deleteSelectedElementClicked,
   furnitureTypeButtonClicked
 } from './listeners';
 
@@ -35,6 +34,7 @@ const furniture = createSlice({
       ));
 
       state.allElements = newArr;
+      state.selectedElementId = null;
     },    
     deleteAllElements(state) {      
       state.allElements = [];
