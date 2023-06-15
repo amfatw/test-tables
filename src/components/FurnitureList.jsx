@@ -10,22 +10,30 @@ const FurnitureList = () => {
   const selectedType = useSelector((state) => state.furniture.elementTypeToAdd);
   const dispatch = useDispatch();
 
+  const handleClick = (evt, type) => {
+    evt.preventDefault();
+    dispatch(furnitureTypeButtonClicked(type));
+  }
+
 
   return (
     <ul className='furniture-list'>
       {
         furnitureTypes.map((type) => {  
-          let classes = `furniture-button furniture-button--${type}`;
+          let classes = `furniture-button furniture-button-${type}`;
           if (type === selectedType) classes += ' furniture-button--selected';
 
           return (
             <li key={type}>
               <button 
                 className={classes}
-                onClick={() => dispatch(furnitureTypeButtonClicked(type))}
+                // onClick={(evt) => evt.preventdefault()}
+                onClick={(evt) => handleClick(evt, type)}
               >
-                {getButtonText(type)}
               </button>
+              <p className='furniture-name'>
+                {getButtonText(type)}
+              </p>
             </li>
           )
         })

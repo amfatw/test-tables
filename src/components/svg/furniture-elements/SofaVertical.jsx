@@ -6,7 +6,7 @@ const SofaVertical = ({x, y, id, size=50, isBlank=false}) => {
   
   const isSelected = id === Number(selectedElementId);
   
-  let classes = '';
+  let classes = 'scheme__sofaVertical';
   if (isSelected) classes += ' selected-element';
   if (isBlank) classes += ' blank-element';
 

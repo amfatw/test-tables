@@ -1,0 +1,18 @@
+.file-input {
+  display: none;
+}
+
+.file-input-label {
+  display: block;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+  
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+.file-input-label:hover,
+.file-input-label:focus {
+  background-color: rgb(144, 198, 216);
+}

@@ -1,0 +1,13 @@
+.download-button {
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+.download-button:hover,
+.download-button:focus {
+  background-color: rgb(144, 198, 216);
+}

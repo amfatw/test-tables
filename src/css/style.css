@@ -1,55 +1,14 @@
 @import './normalize.css';
-
-
-main {
-  width: 1240px;
-  display: flex;
-  column-gap: 50px;
-  padding: 50px;
-  margin: 0 auto;
-}
-
-.furniture-block {
-  border: 1px solid black;
-}
-
-.furniture-list {
-  display: flex;
-  margin-bottom: 50px;
-}
-
-.buttons-list {
-  display: flex;
-  justify-content: space-around;
-}
-
-.furniture-button--selected {
-  background-color: red;
-}
-
-.scheme {
-  flex-shrink: 0;
-  width: 500px;
-  height: 500px;
-  background-color: gray;
-}
-
-.blank-element {
-  display: none;
-
-  fill: green;
-  opacity: 0.5;
-}
-
-.selected-element {
-  fill: blue;
-}
-
-svg:hover .blank-element {
-  display: block;
-}
-
-
+@import './blocks/page-main.css';
+@import './blocks/control-panel.css';
+@import './blocks/furniture-list.css';
+@import './blocks/furniture-button.css';
+@import './blocks/control-buttons.css';
+@import './blocks/download-button.css';
+@import './blocks/file-input.css';
+@import './blocks/clear-button.css';
+@import './blocks/delete-button.css';
+@import './blocks/scheme.css';
 
 .visually-hidden {
   position: absolute;

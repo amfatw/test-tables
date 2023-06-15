@@ -1,0 +1,35 @@
+.scheme {
+  flex-shrink: 0;
+  background-color: rgb(176, 173, 173);
+}
+
+.scheme__grid {
+  stroke: black;
+}
+
+.scheme__chair,
+.scheme__sofa,
+.scheme__sofaVertical {
+  fill: #a4590e;
+}
+
+.scheme__table,
+.scheme__tableDouble,
+.scheme__tableDoubleVertical {
+  fill: #151414;
+}
+
+.selected-element {
+  fill: blue;
+}
+
+.blank-element {
+  display: none;
+
+  fill: green;
+  opacity: 0.5;
+}
+
+.scheme:hover .blank-element {
+  display: block;
+}

@@ -62,9 +62,6 @@ const furniture = createSlice({
       .addCase(clearSchemeClicked, (state) => {
         state.selectedElementId = null;
       })
-      .addCase(deleteSelectedElementClicked, (state) => {
-        state.selectedElementId = null;
-      })
       .addCase(furnitureTypeButtonClicked, (state) => {
         state.selectedElementId = null;
       })

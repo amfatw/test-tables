@@ -4,7 +4,7 @@ import { Scheme } from './components/Scheme';
 
 const App = () => {
   return (
-    <main>
+    <main className='page-main'>
       <h2 className='visually-hidden'>Схема расстановки столов</h2>
 
       <ControlPanel/>

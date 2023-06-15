@@ -4,7 +4,7 @@ import { ControlButtons } from './ControlButtons';
 
 const ControlPanel = () => {
   return (
-    <div className='furniture-block'>
+    <div className='control-panel'>
       <FurnitureList/>
 
       <ControlButtons/>

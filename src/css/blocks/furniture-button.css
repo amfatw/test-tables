@@ -1,0 +1,86 @@
+.furniture-button {
+  position: relative;
+
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  border: none;
+  border-radius: 15px;
+  margin-bottom: 5px;
+
+  background-color: #efefef;
+  cursor: pointer;
+}
+
+.furniture-button:hover,
+.furniture-button:focus {
+  background-color: #d6d4d4;
+}
+
+.furniture-button::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  content: '';
+
+  transform: translate(-50%, -50%);
+}
+
+.furniture-button-chair::before {
+  width: 35px;
+  height: 35px;
+  border-radius: 25px;
+
+  background-color: #a4590e;
+}
+
+.furniture-button-table::before {
+  width: 35px;
+  height: 35px;
+  
+  background-color: #151414;
+}
+
+.furniture-button-tableDouble::before {
+  width: 70px;
+  height: 35px;
+
+  background-color: #151414;
+}
+
+.furniture-button-tableDoubleVertical::before {
+  width: 35px;
+  height: 70px;
+
+  background-color: #151414;
+}
+
+.furniture-button-sofa::before {
+  width: 70px;
+  height: 35px;
+  border-radius: 20px;
+
+  background-color: #a4590e;
+}
+
+.furniture-button-sofaVertical::before {
+  width: 35px;
+  height: 70px;
+  border-radius: 25px;
+
+  background-color: #a4590e;
+}
+
+.furniture-button--selected {
+  background-color: lightgreen;
+}
+
+.furniture-button--selected:hover,
+.furniture-button--selected:focus {
+  background-color: lightgreen;
+}
+
+.furniture-name {
+  text-align: center;
+}

@@ -52,6 +52,8 @@ const Scheme = () => {
       ref={schemeRef}
       onMouseMove={handleMove}
       onClick={handleClick}
+      width={500}
+      height={500}
     >
       <SchemeGrid/>
       

@@ -46,27 +46,44 @@ const ControlButtons = () => {
 
 
   return (
-    <ul className='buttons-list'>
+    <ul className='control-buttons'>
       <li>
-        <button onClick={downloadScheme}>
-          Скачать схему
+        <button
+          className='download-button'
+          onClick={downloadScheme}
+        >
+          Скачать
         </button>
       </li>
       <li>
-        <button onClick={handleClearScheme}>
-          Очистить схему
-        </button>
-      </li>
-      <li>
-        <input 
+        <label
+          className='file-input-label'
+          htmlFor="file-input"
+        >
+          Загрузить
+        </label>
+        <input
+          className='file-input'
           type="file"
           accept=".json"
           onChange={handleUploadedFile}
+          id='file-input'
         >
         </input>
       </li>
       <li>
-        <button onClick={handleDeleteSelectedElement}>
+        <button
+          className='clear-button'
+          onClick={handleClearScheme}
+        >
+          Удалить всё
+        </button>
+      </li>
+      <li>
+        <button
+          className='delete-button'
+          onClick={handleDeleteSelectedElement}
+        >
           Удалить элемент
         </button>
       </li>

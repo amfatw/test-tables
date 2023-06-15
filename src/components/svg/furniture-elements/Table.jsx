@@ -5,8 +5,8 @@ const Table = ({x, y, id, size=50, isBlank=false}) => {
   const selectedElementId = useSelector((state) => state.furniture.selectedElementId);
 
   const isSelected = id === Number(selectedElementId);
-                      
-  let classes = '';
+
+  let classes = 'scheme__table';
   if (isSelected) classes += ' selected-element';
   if (isBlank) classes += ' blank-element';
 
