@@ -1,16 +1,14 @@
 const downloadData = (data, fileName) => {
-  const string = JSON.stringify(data);
+  const jsonData = JSON.stringify(data);  
 
-  const element = document.createElement('a');
-  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(string));
-  element.setAttribute('download', fileName);
+  const link = document.createElement('a');
+  link.href = "data:text/json;charset=utf-8," + encodeURIComponent(jsonData);
+  link.download = fileName;
+  link.style.display = 'none';
 
-  element.style.display = 'none';
-  document.body.appendChild(element);
-
-  element.click();
-
-  document.body.removeChild(element);
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);  
 }
 
 

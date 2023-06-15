@@ -1,16 +1,14 @@
 import { useSelector } from 'react-redux';
 
 
-const SofaVertical = ({x, y, id, size=50, color = 'black', isBlank=false}) => {
+const SofaVertical = ({x, y, id, size=50, isBlank=false}) => {
   const selectedElementId = useSelector((state) => state.furniture.selectedElementId);
   
-  const isSelected = isBlank
-                     ? false
-                     : id == selectedElementId;
+  const isSelected = id === Number(selectedElementId);
   
   let classes = '';
-  if (isBlank) classes += ' blank-element';
   if (isSelected) classes += ' selected-element';
+  if (isBlank) classes += ' blank-element';
 
   const radius = size / 2;
   
@@ -26,7 +24,6 @@ const SofaVertical = ({x, y, id, size=50, color = 'black', isBlank=false}) => {
     <g
       id={id}
       className={classes}
-      fill={color}
     >
       <circle 
         cx={x + radius}

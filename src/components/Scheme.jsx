@@ -1,9 +1,10 @@
 import { useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { elementOnSchemeClicked } from '../redux/listeners';
+
 import { BlankElement } from './svg/BlankElement';
 import { SwitchElement } from './svg/SwitchElement';
-import { elementOnSchemeClicked } from '../redux/listeners';
 
 import { getCoords } from '../utils/getCoords';
 
@@ -13,13 +14,13 @@ const Scheme = () => {
   const allElements = useSelector((state) => state.furniture.allElements);
   const elementTypeToAdd = useSelector((state) => state.furniture.elementTypeToAdd)
   const [mouseCoordsForBlank, setMouseCoordsForBlank] = useState({x: 0, y: 0});
-  const svgRef = useRef(null);
-
+  const schemeRef = useRef(null);
+  
   const handleMove = (event) => {
     if (!elementTypeToAdd) return;
 
     const {pageX: mouseX, pageY: mouseY} = event;
-    const {left: elementX, top: elementY} = getCoords(svgRef.current);
+    const {left: elementX, top: elementY} = getCoords(schemeRef.current);
 
     const offsetX = Math.round(mouseX - elementX);
     const offsetY = Math.round(mouseY - elementY);
@@ -47,7 +48,7 @@ const Scheme = () => {
     <svg 
       className='scheme'
       xmlns="http://www.w3.org/2000/svg"
-      ref={svgRef}
+      ref={schemeRef}
       onMouseMove={handleMove}
       onClick={handleClick}
     >
@@ -64,7 +65,6 @@ const Scheme = () => {
               key={id}
             />
           )
-
         })
       }
 

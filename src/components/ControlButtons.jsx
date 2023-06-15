@@ -5,6 +5,7 @@ import {
   deleteSelectedElementClicked,
   elementsLoadedFromFile,
 } from '../redux/listeners';
+
 import { downloadData } from '../utils/downloadData';
 
 
@@ -19,8 +20,7 @@ const ControlButtons = () => {
 
   const downloadScheme = (event) => {
     event.preventDefault();
-
-    downloadData(placedElements, 'Схема зала.txt');
+    downloadData(placedElements, 'Схема зала.json');
   }
 
   const handleUploadedFile = (event) => {
@@ -44,7 +44,7 @@ const ControlButtons = () => {
     dispatch(deleteSelectedElementClicked())
   }
 
-  
+
   return (
     <ul className='buttons-list'>
       <li>
@@ -60,7 +60,7 @@ const ControlButtons = () => {
       <li>
         <input 
           type="file"
-          accept=".txt"
+          accept=".json"
           onChange={handleUploadedFile}
         >
         </input>

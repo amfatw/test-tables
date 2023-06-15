@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 
 import { furnitureTypeButtonClicked } from '../redux/listeners';
+
 import { getButtonText } from '../utils/getButtonText';
 
 

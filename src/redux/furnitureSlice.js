@@ -1,4 +1,10 @@
-import { createSlice, createAction, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
+
+import {
+  clearSchemeClicked,
+  deleteSelectedElementClicked,
+  furnitureTypeButtonClicked
+} from './listeners';
 
 const initialElements = [
   {type: 'chair', x: 0, y: 0, id: 1},
@@ -51,38 +57,18 @@ const furniture = createSlice({
       state.selectedElementId = payload;
     },
   },
-  // extraReducers: (builder) => {
-  //   builder
-  //     .addCase(changeSettings, (state) => {
-  //       state.list = [];
-  //       state.status = 'ok';
-  //       state.error = null;
-  //     })
-  //     .addCase(charactersEnded, (state) => {
-  //       state.status = 'ended';
-  //     })
-  //     .addCase(fetchCharacters.pending, (state) => {
-  //       state.status = 'loading';
-  //       state.error = null;
-  //     })
-  //     .addCase(fetchCharacters.rejected, (state, action) => {
-  //       const { name, message } = action.payload;
-
-  //       state.status = 'error';
-  //       state.error = `${name}: ${message}`
-  //     })
-  //     .addCase(fetchCharacters.fulfilled, (state, action) => {
-  //       const characters = action.payload;
-
-  //       if (characters.length < 1) {
-  //         state.status = 'no result';
-  //         return;
-  //       }
-
-  //       state.list = characters;
-  //       state.status = 'ok';
-  //     })
-  // }
+  extraReducers: (builder) => {
+    builder
+      .addCase(clearSchemeClicked, (state) => {
+        state.selectedElementId = null;
+      })
+      .addCase(deleteSelectedElementClicked, (state) => {
+        state.selectedElementId = null;
+      })
+      .addCase(furnitureTypeButtonClicked, (state) => {
+        state.selectedElementId = null;
+      })
+  }
 })
 
 

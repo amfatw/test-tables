@@ -22,28 +22,28 @@ const addElementClicked = createAction('listener/addElementClicked');
 
 listenerMiddleware.startListening({
   actionCreator: furnitureTypeButtonClicked,
-  effect: (action, {dispatch, getState} ) => {
+  effect: (action, {dispatch} ) => {
     dispatch(selectElementTypeToAdd(action.payload));
   }
 });
 
 listenerMiddleware.startListening({
   actionCreator: clearSchemeClicked,
-  effect: (action, {dispatch, getState} ) => {
+  effect: (action, {dispatch} ) => {
     dispatch(deleteAllElements());
   }
 });
 
 listenerMiddleware.startListening({
   actionCreator: elementsLoadedFromFile,
-  effect: (action, {dispatch, getState} ) => {
+  effect: (action, {dispatch} ) => {
     dispatch(importElementsFromFile(action.payload));
   }
 });
 
 listenerMiddleware.startListening({
   actionCreator: deleteSelectedElementClicked,
-  effect: (action, {dispatch, getState} ) => {
+  effect: (action, {dispatch} ) => {
     dispatch(deleteSelectedElement());
   }
 });
@@ -71,7 +71,7 @@ listenerMiddleware.startListening({
 
 listenerMiddleware.startListening({
   actionCreator: addElementClicked,
-  effect: (action, {dispatch, getState} ) => {
+  effect: (action, {dispatch} ) => {
     dispatch(addElement(action.payload));
   }
 });
