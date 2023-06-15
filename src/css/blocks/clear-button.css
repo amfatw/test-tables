@@ -11,3 +11,8 @@
 .clear-button:focus {
   background-color: rgb(233, 113, 113);
 }
+
+.clear-button:disabled {
+  background-color: rgb(251, 166, 166);
+  cursor: auto;
+}

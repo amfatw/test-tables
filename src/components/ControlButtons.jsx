@@ -12,6 +12,11 @@ import { downloadData } from '../utils/downloadData';
 const ControlButtons = () => {
   const dispatch = useDispatch();
   const placedElements = useSelector((state) => state.furniture.allElements);
+  const selectedElement = useSelector((state) => state.furniture.selectedElementId);
+
+
+  const isClearDisabled = placedElements[0] ? false : true;
+  const isDeleteDisabled = selectedElement ? false : true;
 
   const handleClearScheme = (event) => {
     event.preventDefault();
@@ -74,6 +79,7 @@ const ControlButtons = () => {
       <li>
         <button
           className='clear-button'
+          disabled={isClearDisabled}
           onClick={handleClearScheme}
         >
           Удалить всё
@@ -82,6 +88,7 @@ const ControlButtons = () => {
       <li>
         <button
           className='delete-button'
+          disabled={isDeleteDisabled}
           onClick={handleDeleteSelectedElement}
         >
           Удалить элемент
