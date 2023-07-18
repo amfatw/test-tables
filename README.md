@@ -35,7 +35,7 @@
 
 3. В корневой папке выполнить `npm run dev`
 
-3. Открыть в браузере страницу http://localhost:5173/test-green-api/
+3. Открыть в браузере страницу http://localhost:5173/test-tables/
 
 ## Скриншоты
 
